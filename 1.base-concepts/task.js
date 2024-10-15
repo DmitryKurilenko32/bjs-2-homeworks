@@ -7,12 +7,15 @@ function solveEquation(a, b, c) {
 	if (dis === 0) {
 		arr[0] = -b / (2 * a);
 
-	} else if (dis < 0) {
+	} else if (dis > 0) {
 		arr[0] = (-b + Math.sqrt(dis)) / (2 * a);
 		arr[1] = (-b - Math.sqrt(dis)) / (2 * a);
-	} else if (dis > 0) {
+	} else if (dis < 0) {
 		arr = []
 	}
 
 	return arr;
+}
+function calculateTotalMortgage(percent, contribution, amount, countMonths){
+	
 }
