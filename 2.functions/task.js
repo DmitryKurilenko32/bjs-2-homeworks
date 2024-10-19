@@ -77,10 +77,34 @@ function differenceEvenOddWorker(...arr) {
 
 }
 
-/*function averageEvenElementsWorker(...arr) {
-
+function averageEvenElementsWorker(...arr) {
+let sumEvenElement = 0;
+let countEvenElement = 0;
+let average = 0;
+for (let element of arr) {
+	if (element % 2 === 0){
+		sumEvenElement += element;
+		countEvenElement ++;
+	} else if (arr === 0){
+	average = 0;
+	}  
+	average = sumEvenElement / countEvenElement;
+}
+	return average;
 }
 
 function makeWork (arrOfArr, func) {
+	let maxWorkerResult = -Infinity;
 
-} */
+	for (let i = 0; i < arrOfArr.length; i++) {
+	  let max = func(...arrOfArr[i]);
+	  if (maxWorkerResult < max) {
+		maxWorkerResult = max;
+	  }
+	}
+	return maxWorkerResult;
+  }
+
+
+
+
